@@ -6,11 +6,15 @@
     <title>Atharv Vani — Data Science Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300">
     <header class="bg-white shadow p-6">
         <h1 class="text-4xl font-bold text-center">Atharv Vani</h1>
         <p class="text-center text-lg mt-2">Exploring Data Science, LLMs, and Agentic Workflows</p>
     </header>
+
+    <div class="max-w-4xl mx-auto mt-6 flex justify-end px-6">
+        <button id="themeToggle" class="px-4 py-2 bg-gray-200 rounded-lg shadow hover:bg-gray-300">Toggle Dark Mode</button>
+    </div>
 
     <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
         <h2 class="text-2xl font-semibold mb-4">About Me</h2>
@@ -26,29 +30,11 @@
         <p class="mb-4">Add links to your GitHub repos in the placeholders below.</p>
 
         <div class="space-y-6">
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">LLM + Reinforcement Learning Pipeline</h3>
-                <p class="text-gray-700">A system experimenting with RL-driven prompt optimization and agentic reasoning workflows.</p>
-                <a href="YOUR_GITHUB_LINK_HERE" class="text-blue-600 hover:underline">GitHub Repo</a>
-            </div>
+            
 
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">Evil Wordle in Python</h3>
-                <p class="text-gray-700">Dynamic adversarial Wordle solver using sorting, constraints, and rule-based feedback logic.</p>
-                <a href="YOUR_GITHUB_LINK_HERE" class="text-blue-600 hover:underline">GitHub Repo</a>
-            </div>
+            
 
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">Leprosy Data Analysis in R</h3>
-                <p class="text-gray-700">Statistical modeling and visualization examining prevalence trends across districts.</p>
-                <a href="YOUR_GITHUB_LINK_HERE" class="text-blue-600 hover:underline">GitHub Repo</a>
-            </div>
-
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">MongoDB + ETL Workflow</h3>
-                <p class="text-gray-700">Hands-on data engineering pipeline exploring Redis, PostgreSQL, and Databricks integrations.</p>
-                <a href="YOUR_GITHUB_LINK_HERE" class="text-blue-600 hover:underline">GitHub Repo</a>
-            </div>
+            
         </div>
     </section>
 
@@ -56,11 +42,16 @@
         <h2 class="text-2xl font-semibold mb-4">Course-Based Work</h2>
 
         <ul class="list-disc ml-6 space-y-2 text-lg">
-            <li>SDS 431: Deep Learning — Neural networks, ResNets, probabilistic regression</li>
-            <li>SDS 375: Applied Statistics — RMarkdown, modeling, visualization</li>
-            <li>Database Systems — MongoDB, SQL, NoSQL schemas</li>
-            <li>Linear Algebra — Eigenvalues, orthogonality, transformations</li>
-            <li>Hip Hop Studies — Data + cultural analysis projects</li>
+            <li>M 340L — Linear Algebra</li>
+            <li>M 408C/D — Calculus I, II, III</li>
+            <li>SDS 313 — Intro to Data Science</li>
+            <li>SDS 315 — Statistical Thinking</li>
+            <li>SDS 431 — Probability and Statistical Inference</li>
+            <li>SDS 375 — Sports Analytics</li>
+            <li>CS 303E — Elements of Computers & Programming</li>
+            <li>CS 313E — Elements of Software Design (Data Structures & Algorithms)</li>
+            <li>CS 327E — Elements of Databases</li>
+            <li>E M 397 — Machine Learning & Data Science</li>
         </ul>
     </section>
 
@@ -74,5 +65,21 @@
     <footer class="text-center text-sm text-gray-600 mt-10 p-6">
         © 2025 Atharv Vani — Data Science & Machine Learning Portfolio
     </footer>
+    <script>
+        const toggleBtn = document.getElementById('themeToggle');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+
+            if (body.classList.contains('dark')) {
+                body.classList.remove('bg-gray-50', 'text-gray-800');
+                body.classList.add('bg-gray-900', 'text-gray-200');
+            } else {
+                body.classList.remove('bg-gray-900', 'text-gray-200');
+                body.classList.add('bg-gray-50', 'text-gray-800');
+            }
+        });
+    </script>
 </body>
 </html>
