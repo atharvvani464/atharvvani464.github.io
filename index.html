@@ -12,29 +12,43 @@
         <p class="text-center text-lg mt-2">Exploring Data Science, LLMs, and Agentic Workflows</p>
     </header>
 
-    <div class="max-w-4xl mx-auto mt-6 flex justify-end px-6">
-        <button id="themeToggle" class="px-4 py-2 bg-gray-200 rounded-lg shadow hover:bg-gray-300">Toggle Dark Mode</button>
-    </div>
+    
 
     <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
         <h2 class="text-2xl font-semibold mb-4">About Me</h2>
         <p class="leading-relaxed text-lg">
-            I'm a Statistics and Data Science student at UT Austin focused on machine learning, LLM-driven systems, and agentic workflows. 
-            My work includes projects in reinforcement learning, neural networks, MongoDB/SQL databases, ETL pipelines, and literary data analysis. 
-            I enjoy building practical ML systems, exploring model behavior, and applying computational thinking to real-world problems.
+            I'm a Statistics and Data Science student at UT Austin focused on building ML/AI workflows, complementing my interest in LLMs.
+            My work includes projects in reinforcement learning, neural networks, MongoDB/SQL databases, and data analytics. Feel free to reach out with any questions
         </p>
     </section>
 
     <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
-        <h2 class="text-2xl font-semibold mb-4">Featured Projects</h2>
-        <p class="mb-4">Add links to your GitHub repos in the placeholders below.</p>
+        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
 
         <div class="space-y-6">
-            
+            <div class="p-4 border rounded-lg">
+                <h3 class="text-xl font-semibold">SpaceX Simulation — IBM Data Science</h3>
+                <p class="text-gray-700">Data science workflow including EDA, visualization, and machine learning using SpaceX launch data.</p>
+                <a href="https://github.com/atharvvani464/SpaceX-Simulation-IBM-Data-Science" class="text-blue-600 hover:underline">GitHub Repo</a>
+            </div>
 
-            
+            <div class="p-4 border rounded-lg">
+                <h3 class="text-xl font-semibold">Customer Segmentation</h3>
+                <p class="text-gray-700">Unsupervised learning project using k-means to segment customers based on behavior and features.</p>
+                <a href="https://github.com/atharvvani464/Customer-Segmentation" class="text-blue-600 hover:underline">GitHub Repo</a>
+            </div>
 
-            
+            <div class="p-4 border rounded-lg">
+                <h3 class="text-xl font-semibold">T-Transformer</h3>
+                <p class="text-gray-700">A transformer-based architecture implementation exploring sequence modeling and attention mechanisms.</p>
+                <a href="https://github.com/atharvvani464/T-Transformer" class="text-blue-600 hover:underline">GitHub Repo</a>
+            </div>
+
+            <div class="p-4 border rounded-lg">
+                <h3 class="text-xl font-semibold">Registration Planner</h3>
+                <p class="text-gray-700">A course-planning tool using DFS to help students optimize registration schedules.</p>
+                <a href="https://github.com/atharvvani464/CS-313E-Registration-Planning" class="text-blue-600 hover:underline">GitHub Repo</a>
+            </div>
         </div>
     </section>
 
@@ -57,29 +71,14 @@
 
     <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
         <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p>Email: <span class="font-mono">your.email@domain.com</span></p>
-        <p>GitHub: <a href="YOUR_GITHUB_PROFILE" class="text-blue-600 hover:underline">yourusername</a></p>
-        <p>LinkedIn: <a href="YOUR_LINKEDIN" class="text-blue-600 hover:underline">LinkedIn Profile</a></p>
+        <p>Email: <span class="font-mono">atharvv08@gmail.com</span></p>
+        <p>GitHub: <a href="https://github.com/atharvvani464" class="text-blue-600 hover:underline">yourusername</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/atharv-vani/" class="text-blue-600 hover:underline">LinkedIn Profile</a></p>
     </section>
 
     <footer class="text-center text-sm text-gray-600 mt-10 p-6">
         © 2025 Atharv Vani — Data Science & Machine Learning Portfolio
     </footer>
-    <script>
-        const toggleBtn = document.getElementById('themeToggle');
-        const body = document.body;
-
-        toggleBtn.addEventListener('click', () => {
-            body.classList.toggle('dark');
-
-            if (body.classList.contains('dark')) {
-                body.classList.remove('bg-gray-50', 'text-gray-800');
-                body.classList.add('bg-gray-900', 'text-gray-200');
-            } else {
-                body.classList.remove('bg-gray-900', 'text-gray-200');
-                body.classList.add('bg-gray-50', 'text-gray-800');
-            }
-        });
-    </script>
+    
 </body>
 </html>
