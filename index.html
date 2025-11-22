@@ -1,82 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atharv Vani — Data Science Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Sidebar styles */
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar-hidden {
+            transform: translateX(-100%);
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                transform: translateX(0) !important;
+            }
+        }
+
+        /* Mobile overlay */
+        #overlay {
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        #overlay.active {
+            opacity: 0.5;
+            pointer-events: auto;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800 transition-colors duration-300">
-    <header class="bg-white shadow p-6">
-        <h1 class="text-4xl font-bold text-center">Atharv Vani</h1>
-        <p class="text-center text-lg mt-2">Exploring Data Science, LLMs, and Agentic Workflows</p>
-    </header>
 
-    <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
-        <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-        <p class="leading-relaxed text-lg">
-            I'm a Statistics and Data Science student at UT Austin focused on building ML/AI workflows, complementing my interest in LLMs.
-            My work includes projects in reinforcement learning, neural networks, MongoDB/SQL databases, and data analytics. Feel free to reach out with any questions
-        </p>
-    </section>
+<body class="bg-gray-50 text-gray-800">
 
-    <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+    <!-- Sidebar Toggle Button (mobile only) -->
+    <button id="toggleSidebar" class="md:hidden fixed top-4 left-4 z-50 bg-blue-600 text-white px-3 py-2 rounded">☰
+        Menu</button>
 
-        <div class="space-y-6">
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">SpaceX Simulation — IBM Data Science</h3>
-                <p class="text-gray-700">Data science workflow including EDA, visualization, and machine learning using SpaceX launch data.</p>
-                <a href="https://github.com/atharvvani464/SpaceX-Simulation-IBM-Data-Science" class="text-blue-600 hover:underline">GitHub Repo</a>
+    <!-- Sidebar -->
+    <div id="sidebar"
+        class="sidebar fixed left-0 top-0 h-full w-56 bg-white shadow-md p-6 space-y-4 z-40 sidebar-hidden">
+        <h2 class="text-xl font-semibold mb-4">Navigation</h2>
+        <a href="#about" class="block text-lg text-blue-600 hover:underline">About</a>
+        <a href="#projects" class="block text-lg text-blue-600 hover:underline">Projects</a>
+        <a href="#certifications" class="block text-lg text-blue-600 hover:underline">Certifications</a>
+        <a href="#coursework" class="block text-lg text-blue-600 hover:underline">Relevant Coursework</a>
+        <a href="#contact" class="block text-lg text-blue-600 hover:underline">Contact</a>
+    </div>
+
+    <!-- Mobile overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black z-30 md:hidden"></div>
+
+    <!-- Main content wrapper -->
+    <div id="mainContent" class="transition-all duration-300 md:ml-56">
+
+        <!-- Header -->
+        <header id="top" class="bg-white shadow p-6">
+            <h1 class="text-4xl font-bold text-center">Atharv Vani</h1>
+            <p class="text-center text-lg mt-2">Exploring Data Science, LLMs, and Agentic Workflows</p>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
+            <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+            <p class="leading-relaxed text-lg">
+                I'm a Statistics and Data Science student at UT Austin focused on building ML/AI workflows, with a
+                strong interest in LLMs and agentic systems.
+                My experience includes neural networks, reinforcement learning, SQL/MongoDB, and applied analytics.
+                Always happy to discuss projects or collaborate!
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
+            <h2 class="text-2xl font-semibold mb-6">Projects</h2>
+            <div class="space-y-6">
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-xl font-semibold">T-Transformer</h3>
+                    <p class="text-gray-600 italic mb-1">September 2025 – Present</p>
+                    <p class="text-gray-700">A transformer architecture exploring sequence modeling and attention
+                        mechanisms.</p>
+                    <a href="https://github.com/atharvvani464/T-Transformer"
+                        class="text-blue-600 hover:underline">GitHub Repo</a>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-xl font-semibold">Sports Analytics</h3>
+                    <p class="text-gray-600 italic mb-1">August 2025 – December 2025</p>
+                    <p class="text-gray-700">Homework assignments in RStudio using tidyverse and real sports datasets.
+                    </p>
+                    <a href="https://github.com/atharvvani464/SDS375" class="text-blue-600 hover:underline">GitHub
+                        Repo</a>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-xl font-semibold">SpaceX Simulation — IBM Data Science</h3>
+                    <p class="text-gray-600 italic mb-1">May 2025 – October 2025</p>
+                    <p class="text-gray-700">Full ML workflow including EDA, visualization, prediction modeling, and
+                        evaluation.</p>
+                    <a href="https://github.com/atharvvani464/SpaceX-Simulation-IBM-Data-Science"
+                        class="text-blue-600 hover:underline">GitHub Repo</a>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-xl font-semibold">Customer Segmentation</h3>
+                    <p class="text-gray-600 italic mb-1">June 2025 – July 2025</p>
+                    <p class="text-gray-700">Unsupervised clustering using k-means to segment customers by behavior and
+                        features.</p>
+                    <a href="https://github.com/atharvvani464/Customer-Segmentation"
+                        class="text-blue-600 hover:underline">GitHub Repo</a>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <h3 class="text-xl font-semibold">Registration Planner</h3>
+                    <p class="text-gray-600 italic mb-1">January 2025 – April 2025</p>
+                    <p class="text-gray-700">DFS-based class scheduling system to help students optimize registration
+                        choices.</p>
+                    <a href="https://github.com/atharvvani464/CS-313E-Registration-Planning"
+                        class="text-blue-600 hover:underline">GitHub Repo</a>
+                </div>
             </div>
+        </section>
 
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">Customer Segmentation</h3>
-                <p class="text-gray-700">Unsupervised learning project using k-means to segment customers based on behavior and features.</p>
-                <a href="https://github.com/atharvvani464/Customer-Segmentation" class="text-blue-600 hover:underline">GitHub Repo</a>
+        <!-- Certifications Section -->
+        <section id="certifications" class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
+            <h2 class="text-2xl font-semibold mb-6">Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- IBM Certificate -->
+                <div class="p-4 border rounded-lg bg-gray-50">
+                    <h3 class="text-xl font-semibold mb-2">IBM Data Science Professional Certificate</h3>
+                    <p class="text-gray-600 italic mb-2">Completed October 2025</p>
+                    <img src="IBM_Cert.png" alt="IBM Certificate Thumbnail"
+                        class="w-full h-48 object-cover border rounded mb-3">
+                    <a href="https://coursera.org/verify/professional-cert/VR6Z0JVJ22FX"
+                        class="text-blue-600 hover:underline">View Certificate</a>
+                </div>
+
+                <!-- Java OOP Certificate -->
+                <div class="p-4 border rounded-lg bg-gray-50">
+                    <h3 class="text-xl font-semibold mb-2">Java Object Oriented Programming</h3>
+                    <p class="text-gray-600 italic mb-2">Completed May 2024 — Certiport</p>
+                    <img src="JavaCert.png" alt="Java OOP Certificate Thumbnail"
+                        class="w-full h-48 object-cover border rounded mb-3">
+                    <a href="JavaCertificate.pdf" class="text-blue-600 hover:underline">View Certificate</a>
+                </div>
             </div>
+        </section>
 
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">T-Transformer</h3>
-                <p class="text-gray-700">A transformer-based architecture implementation exploring sequence modeling and attention mechanisms.</p>
-                <a href="https://github.com/atharvvani464/T-Transformer" class="text-blue-600 hover:underline">GitHub Repo</a>
-            </div>
+        <!-- Coursework Section -->
+        <section id="coursework" class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
+            <h2 class="text-2xl font-semibold mb-4">Relevant Coursework</h2>
+            <ul class="list-disc ml-6 space-y-2 text-lg">
+                <li>M 340L — Linear Algebra</li>
+                <li>M 408C/D — Calculus I, II, III</li>
+                <li>SDS 313 — Intro to Data Science</li>
+                <li>SDS 315 — Statistical Thinking</li>
+                <li>SDS 431 — Probability and Statistical Inference</li>
+                <li>SDS 375 — Sports Analytics</li>
+                <li>CS 303E — Elements of Computers & Programming</li>
+                <li>CS 313E — Software Design & Algorithms</li>
+                <li>CS 327E — Databases</li>
+                <li>E M 397 — Machine Learning & Data Science</li>
+            </ul>
+        </section>
 
-            <div class="p-4 border rounded-lg">
-                <h3 class="text-xl font-semibold">Registration Planner</h3>
-                <p class="text-gray-700">A course-planning tool using DFS to help students optimize registration schedules.</p>
-                <a href="https://github.com/atharvvani464/CS-313E-Registration-Planning" class="text-blue-600 hover:underline">GitHub Repo</a>
-            </div>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
+            <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+            <p>Email: <span class="font-mono">atharvv08@gmail.com</span></p>
+            <p>GitHub: <a href="https://github.com/atharvvani464"
+                    class="text-blue-600 hover:underline">github.com/atharvvani464</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/atharv-vani/"
+                    class="text-blue-600 hover:underline">linkedin.com/in/atharv-vani</a></p>
+        </section>
 
-    <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
-        <h2 class="text-2xl font-semibold mb-4">Relevant Coursework</h2>
+        <footer class="text-center text-sm text-gray-600 mt-10 p-6">© 2025 Atharv Vani</footer>
+    </div>
 
-        <ul class="list-disc ml-6 space-y-2 text-lg">
-            <li>M 340L — Linear Algebra</li>
-            <li>M 408C/D — Calculus I, II, III</li>
-            <li>SDS 313 — Intro to Data Science</li>
-            <li>SDS 315 — Statistical Thinking</li>
-            <li>SDS 431 — Probability and Statistical Inference</li>
-            <li>SDS 375 — Sports Analytics</li>
-            <li>CS 303E — Elements of Computers & Programming</li>
-            <li>CS 313E — Elements of Software Design (Data Structures & Algorithms)</li>
-            <li>CS 327E — Elements of Databases</li>
-            <li>E M 397 — Machine Learning & Data Science</li>
-        </ul>
-    </section>
+    <!-- Sidebar toggle script -->
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const toggleBtn = document.getElementById("toggleSidebar");
+        const overlay = document.getElementById("overlay");
 
-    <section class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow">
-        <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-        <p>Email: <span class="font-mono">atharvv08@gmail.com</span></p>
-        <p>GitHub: <a href="https://github.com/atharvvani464" class="text-blue-600 hover:underline">atharvvani464</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/atharv-vani/" class="text-blue-600 hover:underline">Atharv Vani</a></p>
-    </section>
+        toggleBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("sidebar-hidden");
+            overlay.classList.toggle("active");
+        });
 
-    <footer class="text-center text-sm text-gray-600 mt-10 p-6">
-        © 2025 Atharv Vani — Data Science & Machine Learning Portfolio
-    </footer>
-    
+        overlay.addEventListener("click", () => {
+            sidebar.classList.add("sidebar-hidden");
+            overlay.classList.remove("active");
+        });
+    </script>
 </body>
+
 </html>
