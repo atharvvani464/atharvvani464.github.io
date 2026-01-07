@@ -13,9 +13,10 @@ h1, h2, h3 {
   position: fixed;
   width: 220px;
   height: 100vh;
-  background: #f5f5f5;
-  padding: 20px;
+  background: #f8f9fa;
+  padding: 25px;
   box-sizing: border-box;
+  border-right: 1px solid #e0e0e0;
 }
 
 #sidebar h1 {
@@ -31,9 +32,9 @@ h1, h2, h3 {
 
 #sidebar nav a {
   display: block;
-  margin: 10px 0;
+  margin: 12px 0;
   text-decoration: none;
-  color: #0066cc;
+  color: #0047ab;
 }
 
 #sidebar nav a:hover {
