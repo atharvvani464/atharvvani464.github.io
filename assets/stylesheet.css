@@ -182,6 +182,12 @@ a:hover {
   color: var(--accent);
 }
 
+#sidebar nav a.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 500;
+}
+
 .sidebar-footer {
   margin-top: auto;
   padding-top: 26px;
@@ -235,7 +241,11 @@ h2 {
   line-height: 1.75;
   color: var(--text-muted);
   max-width: 62ch;
-  margin: 0;
+  margin: 0 0 16px;
+}
+
+#about p:last-child {
+  margin-bottom: 0;
 }
 
 #about p strong {
@@ -243,37 +253,44 @@ h2 {
   font-weight: 500;
 }
 
-/* --- Projects ------------------------------------------------- */
+/* --- Experience & Projects (shared entry pattern) ------------- */
 
-.project-list {
+.entry-list {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
-.project {
+.entry {
   padding: 20px 22px;
   margin: 0 -22px;
   border-radius: var(--radius);
   transition: background 0.18s ease;
 }
 
-.project:hover {
+.entry:hover {
   background: var(--bg-panel);
 }
 
-.project-head {
+.entry-head {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
   gap: 6px 16px;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
-.project h3 {
+.entry h3 {
   font-size: 17px;
   margin: 0;
+}
+
+.entry h3 .role {
+  font-family: 'Inter', sans-serif;
+  font-size: 14.5px;
+  font-weight: 400;
+  color: var(--text-muted);
 }
 
 .date {
@@ -284,10 +301,67 @@ h2 {
   margin: 0;
 }
 
-.project p:not(.date) {
+.entry .meta {
+  font-size: 13px;
+  color: var(--text-faint);
   margin: 0 0 10px;
+}
+
+.tag-incoming {
+  display: inline-block;
+  padding: 1px 8px;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+}
+
+.entry p:not(.date):not(.meta) {
+  margin: 6px 0 10px;
   color: var(--text-muted);
-  max-width: 62ch;
+  max-width: 64ch;
+}
+
+.entry > ul:not(.stack) {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  max-width: 64ch;
+  color: var(--text-muted);
+}
+
+.entry > ul:not(.stack) li {
+  margin-bottom: 6px;
+}
+
+.entry > ul:not(.stack) li::marker {
+  color: var(--text-faint);
+}
+
+/* Tech stack chips */
+.stack {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.stack li {
+  padding: 3px 9px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+  background: var(--bg-panel);
+  border: 1px solid var(--rule);
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.entry:hover .stack li {
+  background: var(--bg-card);
 }
 
 .link {
@@ -468,19 +542,27 @@ h2 {
     font-size: 16.5px;
   }
 
-  .project {
+  .entry {
     margin: 0;
     padding: 18px 0;
     border-radius: 0;
     border-bottom: 1px solid var(--rule);
   }
 
-  .project:hover {
+  .entry:hover {
     background: none;
   }
 
-  .project:last-child {
+  .entry:hover .stack li {
+    background: var(--bg-panel);
+  }
+
+  .entry:last-child {
     border-bottom: none;
+  }
+
+  .entry-head {
+    gap: 2px 12px;
   }
 
   .contact-list {
@@ -520,7 +602,7 @@ h2 {
   }
 
   .cert:hover,
-  .project:hover {
+  .entry:hover {
     transform: none;
     box-shadow: none;
   }

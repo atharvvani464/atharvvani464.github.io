@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atharv Vani</title>
   <meta name="description"
-    content="Atharv Vani — Statistics and Data Science undergraduate at UT Austin. Projects in AI/ML, applied analytics, and software development." />
+    content="Atharv Vani — Statistics and Data Science at UT Austin. Data platform and AI/ML engineering: Databricks, BigQuery, Snowflake, PyTorch." />
   <meta name="author" content="Atharv Vani" />
   <meta name="color-scheme" content="light dark" />
 
   <meta property="og:title" content="Atharv Vani" />
   <meta property="og:description"
-    content="Statistics and Data Science undergraduate at UT Austin. AI/ML, applied analytics, and software development." />
+    content="Statistics and Data Science at UT Austin. Data platform and AI/ML engineering." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://atharvvani464.github.io/" />
 
+  <link rel="canonical" href="https://atharvvani464.github.io/" />
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='84' font-family='Georgia,serif'>A</text></svg>" />
   <link rel="stylesheet" href="assets/stylesheet.css" />
@@ -30,14 +32,15 @@
   <a class="skip-link" href="#content">Skip to content</a>
 
   <header id="sidebar">
-    <!-- Drop a photo at assets/headshot.jpg and it replaces the monogram automatically. -->
-    <img src="assets/headshot.jpg" alt="Atharv Vani" class="avatar"
+    <!-- Falls back to an "AV" monogram if the image fails to load. -->
+    <img src="assets/headshot.jpg" alt="Atharv Vani" class="avatar" width="108" height="108"
       onerror="this.outerHTML='&lt;div class=&quot;avatar avatar--monogram&quot; aria-hidden=&quot;true&quot;&gt;AV&lt;/div&gt;'">
     <h1>Atharv Vani</h1>
-    <p class="subtitle">UT Austin &middot; Statistics &amp; Data Science, 2027</p>
+    <p class="subtitle">UT Austin &middot; Statistics &amp; Data Science<br>Minor in Computer Science &middot; 2027</p>
 
     <nav aria-label="Sections">
       <a href="#about">About</a>
+      <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#certifications">Certifications</a>
       <a href="#coursework">Coursework</a>
@@ -45,9 +48,9 @@
     </nav>
 
     <div class="sidebar-footer">
-      <a href="assets/Atharv_Vani_Resume.pdf">Résumé (PDF)</a>
       <a href="https://github.com/atharvvani464">GitHub</a>
       <a href="https://www.linkedin.com/in/atharv-vani/">LinkedIn</a>
+      <a href="mailto:atharvv08@gmail.com">Email</a>
     </div>
   </header>
 
@@ -56,87 +59,173 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        Statistics and Data Science undergraduate student at the University of Texas at Austin. Interested in
-        <strong>AI/ML</strong>, <strong>applied analytics</strong>, and <strong>software development</strong>.
-        Currently working as a Data Science Intern. Previously worked in research roles at the Oden Institute (Austin)
-        and UTMB (Galveston).
+        Statistics and Data Science undergraduate at the University of Texas at Austin, focused on
+        <strong>data platform engineering</strong> and <strong>applied AI/ML</strong>. I build systems that move
+        data end to end — ingestion and pipelines through modeling, serving, and the interface on top.
       </p>
+      <p>
+        Currently a Data Science Engineer Intern at <strong>AT&amp;T</strong>, joining <strong>IBM</strong> as a
+        Software Developer Co-op in Fall 2026.
+      </p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="entry-list">
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>IBM <span class="role">— Software Developer Co-op</span></h3>
+            <p class="date">Aug 2026 – Dec 2026</p>
+          </div>
+          <p class="meta">Austin, TX &middot; <span class="tag-incoming">Incoming</span></p>
+        </article>
+
+        <article class="entry">
+          <div class="entry-head">
+            <h3>AT&amp;T <span class="role">— TDP Data Science Engineer Intern</span></h3>
+            <p class="date">Jun 2026 – Aug 2026</p>
+          </div>
+          <p class="meta">Dallas, TX</p>
+        </article>
+
+      </div>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
 
-      <div class="project-list">
+      <div class="entry-list">
 
-        <article class="project">
-          <div class="project-head">
+        <article class="entry">
+          <div class="entry-head">
             <h3>snfl-fyn</h3>
-            <p class="date">June 2026 – Present</p>
+            <p class="date">Jun 2026 – Present</p>
           </div>
-          <p>Snowflake db finance ingestion.</p>
+          <p>Snowflake finance data ingestion, with a warehouse-backed API and dashboard front end.</p>
+          <ul class="stack">
+            <li>Snowflake</li>
+            <li>Snowpark</li>
+            <li>FastAPI</li>
+            <li>Next.js</li>
+            <li>React</li>
+            <li>Docker</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/snfl-fyn">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
+        <article class="entry">
+          <div class="entry-head">
             <h3>IntelligenceStack</h3>
-            <p class="date">June 2026 – Present</p>
+            <p class="date">Jun 2026 – Present</p>
           </div>
-          <p>Exploring the modern issue of enterprise big data, agents, and analytics.</p>
+          <p>Governed agentic analytics over enterprise data — retrieval, policy enforcement, and a control plane.</p>
+          <ul class="stack">
+            <li>Databricks</li>
+            <li>PySpark</li>
+            <li>DuckDB</li>
+            <li>MLflow</li>
+            <li>FastAPI</li>
+            <li>Streamlit</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/IntelligenceStack">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
+        <article class="entry">
+          <div class="entry-head">
             <h3>T-Transformer</h3>
-            <p class="date">September 2025 – May 2026</p>
+            <p class="date">Sep 2025 – Jun 2026</p>
           </div>
-          <p>Transformer-based architecture exploring sequence modeling and attention mechanisms.</p>
+          <p>Interactive translation service built on a transformer architecture, with containerized inference
+            endpoints and model versioning through CI/CD.</p>
+          <ul class="stack">
+            <li>PyTorch</li>
+            <li>Hugging Face</li>
+            <li>FastAPI</li>
+            <li>Docker</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/T-Transformer">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
-            <h3>DataIntegration</h3>
-            <p class="date">January 2026 – April 2026</p>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>Lakehouse Insights</h3>
+            <p class="date">Jan 2026 – May 2026</p>
           </div>
-          <p>Leverged BigQuery to own a data lakehouse enabling video game market analytics.</p>
+          <p>Video game market lakehouse with bronze/silver/gold layers, surfaced through a Streamlit app for
+            go-to-market timing and launch performance.</p>
+          <ul class="stack">
+            <li>BigQuery</li>
+            <li>dbt</li>
+            <li>Vertex AI</li>
+            <li>GCP</li>
+            <li>Streamlit</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/clone-DataIntegration">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
-            <h3>NEO Detection ML</h3>
-            <p class="date">August 2025 – December 2025</p>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>NEO Hazard Classification</h3>
+            <p class="date">Aug 2025 – Dec 2025</p>
           </div>
-          <p>Final project in ML Grad Course on classification of hazardous near-earth objects.</p>
+          <p>Classification of hazardous near-earth objects on NASA's NEO API, reaching 93% accuracy. Co-authored a
+            report within Cockrell's Engineering Mechanics department.</p>
+          <ul class="stack">
+            <li>scikit-learn</li>
+            <li>pandas</li>
+            <li>seaborn</li>
+            <li>Flask</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/Machine-Learning-Master">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
-            <h3>SpaceX Simulation — IBM Data Science</h3>
-            <p class="date">May 2025 – October 2025</p>
+        <article class="entry">
+          <div class="entry-head">
+            <h3>SpaceX Simulation</h3>
+            <p class="date">May 2025 – Oct 2025</p>
           </div>
-          <p>E2E data science workflow including EDA, visualization, and machine learning using SpaceX API data.</p>
+          <p>End-to-end data science workflow on SpaceX API data — collection, web scraping, SQL analysis,
+            geospatial visualization, and launch-outcome prediction.</p>
+          <ul class="stack">
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Plotly/Dash</li>
+            <li>Folium</li>
+            <li>Jupyter</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/SpaceX-Simulation-IBM-Data-Science">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
+        <article class="entry">
+          <div class="entry-head">
             <h3>Customer Segmentation</h3>
-            <p class="date">June 2025 – July 2025</p>
+            <p class="date">Jun 2025 – Jul 2025</p>
           </div>
-          <p>Unsupervised learning project using k-means to segment customers based on behavioral features.</p>
+          <p>Unsupervised segmentation of customers on behavioral features, with a persisted k-means model and
+            scaler for reuse.</p>
+          <ul class="stack">
+            <li>scikit-learn</li>
+            <li>pandas</li>
+            <li>k-means</li>
+            <li>Jupyter</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/Customer-Segmentation">GitHub</a>
         </article>
 
-        <article class="project">
-          <div class="project-head">
+        <article class="entry">
+          <div class="entry-head">
             <h3>Registration Planner</h3>
-            <p class="date">January 2025 – April 2025</p>
+            <p class="date">Jan 2025 – Apr 2025</p>
           </div>
-          <p>Course planning tool using depth-first search (DFS) to optimize student registration schedules.</p>
+          <p>Course planning tool using depth-first search to resolve prerequisite chains and optimize student
+            registration schedules.</p>
+          <ul class="stack">
+            <li>Python</li>
+            <li>DFS</li>
+            <li>Graph traversal</li>
+          </ul>
           <a class="link" href="https://github.com/atharvvani464/CS-313E-Registration-Planning">GitHub</a>
         </article>
 
@@ -152,7 +241,7 @@
           <h3>Data Science Professional Certificate</h3>
           <p class="issuer">IBM &middot; Coursera</p>
           <a class="link"
-            href="https://www.coursera.org/account/accomplishments/professional-cert/VR6Z0JVJ22FX">View certificate</a>
+            href="https://www.coursera.org/account/accomplishments/professional-cert/VR6Z0JVJ22FX">Verify</a>
         </article>
 
         <article class="cert">
@@ -209,10 +298,32 @@
         <dd><a href="https://github.com/atharvvani464">atharvvani464</a></dd>
         <dt>LinkedIn</dt>
         <dd><a href="https://www.linkedin.com/in/atharv-vani/">atharv-vani</a></dd>
+        <dt>Résumé</dt>
+        <dd>Available on request by email.</dd>
       </dl>
     </section>
 
   </main>
+
+  <script>
+    // Highlight the nav link for whichever section is currently in view.
+    (function () {
+      var links = {};
+      document.querySelectorAll('#sidebar nav a').forEach(function (a) {
+        links[a.getAttribute('href').slice(1)] = a;
+      });
+      if (!('IntersectionObserver' in window)) return;
+      var seen = {};
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+        var current = Object.keys(links).filter(function (id) { return seen[id]; })[0];
+        Object.keys(links).forEach(function (id) {
+          links[id].classList.toggle('is-active', id === current);
+        });
+      }, { rootMargin: '-10% 0px -70% 0px' });
+      document.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+    })();
+  </script>
 </body>
 
 </html>
